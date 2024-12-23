@@ -1,26 +1,32 @@
+//Osman OÄŸuzhan KÄ±rÄ±k b231210372 1c
+//Mehmet Ali TÃ¼fekÃ§i b221210383 1b
+//SÄ±la Ã‡anga G231210372 2c
+//Aleyna Ã‡akÄ±r G231210370 2a
+//Halil Ä°brahim SarÄ±temur B221210352 1a
+
 #ifndef PROGRAM_H
 #define PROGRAM_H
 
-// Maksimum komut uzunluðu ve argüman sayýsý
+// Maksimum komut uzunluï¿½u ve argï¿½man sayï¿½sï¿½
 #define MAX_CMD_LENGTH 1024
 #define MAX_ARGS 100
 
-// Gömülü komutlar için fonksiyon bildirimleri
+// Gï¿½mï¿½lï¿½ komutlar iï¿½in fonksiyon bildirimleri
 int kocsh_help(char** args);
 int kocsh_quit(char** args);
 
-// Komut yorumlama ve çalýþma fonksiyonlarý
+// Komut yorumlama ve ï¿½alï¿½ï¿½ma fonksiyonlarï¿½
 char** komutYorumla(char* line);
 int calistir(char** args);
 int tekliKomutCalistir(char** args);
 int girisYonlendirme(char** args);
 int cikisYonlendirme(char** args);
 
-// Eksik fonksiyonlar (arka plan ve pipe iþlemleri için)
-int arkaPlandaCalistir(char** args); // & sembolü ile arka planda çalýþma
-int boruCalistir(char** args);       // | sembolü ile pipe iþlemi
+// Eksik fonksiyonlar (arka plan ve pipe iï¿½lemleri iï¿½in)
+int arkaPlandaCalistir(char** args); // & sembolï¿½ ile arka planda ï¿½alï¿½ï¿½ma
+int boruCalistir(char** args);       // | sembolï¿½ ile pipe iï¿½lemi
 
-// Sinyal iþleyici fonksiyonu
+// Sinyal iï¿½leyici fonksiyonu
 void sig_chld(int signo);
 
 #endif // PROGRAM_H
